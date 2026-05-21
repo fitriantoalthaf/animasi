@@ -1,2 +1,0 @@
-# animasi
-Web Interaktif Animasi
