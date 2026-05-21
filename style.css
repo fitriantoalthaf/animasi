@@ -1,0 +1,41 @@
+/* Dasar Perilaku Scroll */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* 
+   PERBAIKAN UTAMA: Hapus selektor universal (*).
+   Kita hanya memberikan transisi dark mode pada elemen body dan card secara spesifik, 
+   bukan ke semua elemen di jagat raya web Anda.
+*/
+body {
+    transition: background-color 500ms ease, color 500ms ease;
+}
+
+/* Efek Navbar saat Scroll - Dibuat lebih mulus tanpa mengubah tinggi secara ekstrem */
+.nav-scrolled {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    backdrop-blur: md;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.dark .nav-scrolled {
+    background-color: rgba(2, 6, 23, 0.85) !important;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Kustomisasi Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+.dark ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+}
